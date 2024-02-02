@@ -10,7 +10,7 @@ function App() {
 
   return (
       <Routes>
-        <Route Component={Home} exact path='/home' />
+        <Route Component={Home} exact path='/' />
         <Route Component={Shop} exact path='/shop' />
         <Route Component={AboutUs} exact path='/aboutus' />
         <Route Component={Blog} exact path='/blog' />
