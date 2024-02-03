@@ -1,6 +1,8 @@
+import Header from "../Elements/Header";
+
 function Home() {
     return(
-        <h1>Main Page</h1>
+        <Header/>
     );
 }
 

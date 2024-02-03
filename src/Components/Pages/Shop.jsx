@@ -1,6 +1,11 @@
+import Header from "../Elements/Header";
+
 function Shop() {
-    return(
-        <h1>Shop</h1>
+    return (
+        <>
+            <Header />
+            <h1>Shop</h1>
+        </>
     );
 }
 

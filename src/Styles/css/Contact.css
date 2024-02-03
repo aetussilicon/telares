@@ -1,0 +1,45 @@
+.bannerImg {
+    width: 1260px;
+    height: 700px;
+}
+
+.containerInfo {
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 100px;
+}
+
+.socialIcon {
+    height: 36px;
+}
+
+.containerInfoInside {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 253px;
+    font-family: "Playfair Display", Sans-serif;
+    text-transform: uppercase;
+
+}
+
+.blockItem {
+    margin-bottom: 70px;
+}
+
+.infoTitle {
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.inforSubtitle {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.blockInfo {
+    margin-bottom: 4px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
