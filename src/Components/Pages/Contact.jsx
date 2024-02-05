@@ -6,9 +6,7 @@ function Contact() {
         <>
             <Header />
             <div className="container">
-                <div className="banner d-flex  justify-content-center">
-                    <img className="bannerImg" src="/backgrounds/backgroundContact.jpg" alt="img" />
-                </div>
+                <div className="banner" />
                 <div className="containerInfo d-flex">
                     <div className="containerInfoInside d-flex">
                         <div className="block">
@@ -20,12 +18,12 @@ function Contact() {
                                 </div>
                             </div>
                             <div className="socialNetworks">
-                                    <h2 className="infoTitle">REDES SOCIALES</h2>
-                                    <a href="#"><img className="socialIcon" src="/icons/facebook.png" alt="facebook.png" /></a>
-                                    <a href="#"><img className="socialIcon" src="/icons/twitter.png" alt="twitter.png" /></a>
-                                    <a href="#"><img className="socialIcon" src="/icons/youtube.png" alt="youtube.png" /></a>
-                                    <a href="#"><img className="socialIcon" src="/icons/instagram.png" alt="instagram.png" /></a>
-                                </div>
+                                <h2 className="infoTitle">REDES SOCIALES</h2>
+                                <a href="#"><img className="socialIcon" src="/icons/facebook.png" alt="facebook.png" /></a>
+                                <a href="#"><img className="socialIcon" src="/icons/twitter.png" alt="twitter.png" /></a>
+                                <a href="#"><img className="socialIcon" src="/icons/youtube.png" alt="youtube.png" /></a>
+                                <a href="#"><img className="socialIcon" src="/icons/instagram.png" alt="instagram.png" /></a>
+                            </div>
                         </div>
                         <div className="block">
                             <div className="contact blockItem">

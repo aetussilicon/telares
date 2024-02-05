@@ -1,6 +1,5 @@
-.bannerImg {
-    width: 1260px;
-    height: 700px;
+.banner {
+    background-image: url(/backgrounds/backgroundContact.jpg);
 }
 
 .containerInfo {
@@ -17,7 +16,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 253px;
-    font-family: "Playfair Display", Sans-serif;
     text-transform: uppercase;
 
 }

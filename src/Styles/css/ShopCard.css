@@ -1,0 +1,71 @@
+@media screen and (max-width: 576px) {
+    .shopCard {
+        display: flex;
+        align-items: center;
+
+        .itemIcon {
+            height: 150px ;
+            margin: 0;
+        }
+
+        .cardInfo > h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        } 
+
+        .price {
+            font-size: 18px !important;
+            margin: 0;
+        }
+        .cardInfo > p {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .cardInfo {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cardButton {
+            margin: 10px 0 0 0;
+        }
+    }
+}
+
+.shopCard > p, h2 {
+    margin: 0;
+}
+
+.shopCard > p {
+    font-size: 15px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.cardTitle {
+    font-family: "Arial", Sans-serif !important;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase; 
+}
+
+.itemIcon {
+    height: 232px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.cardButton {
+    margin-top: 20px;
+    background-color: #e9e6ed;
+    color: #515151;
+    border-radius: 3px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.container {
+    padding: 0;
+}

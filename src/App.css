@@ -1,3 +1,53 @@
 #root {
   box-sizing: border-box;
 }
+
+.container {
+  position: relative;
+  padding: 15px 50px !important;
+}
+
+@media screen and (max-width: 767px){
+  .banner {
+    .bannerImg {
+      display: none;
+    }
+  }
+}
+
+.banner {
+  margin-bottom: 100px;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.banner > img {
+  width: 100%;
+  height: auto;
+  overflow: hidden !important;
+  position: relative;
+  display: block;
+}
+
+p:hover {
+  transition: color 0.3s;
+  color: #D1BFB5;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", Sans-serif;
+}
