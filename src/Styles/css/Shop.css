@@ -1,94 +1,88 @@
 /* Filters Section*/
-.bannerShop {
+.banner-shop {
   background-image: url(/backgrounds/backgroundShop.png) !important;
 }
 
-@media screen and (max-width: 576px) {
-
-  .resultGrid {
-    padding: auto;
-  }
-
-  .filtersColumn {
-    .filters {
-      display: none;
-    }
-  }
-
-.cards {
-  width: fit-content !important; 
-}
-  .searchResult {
-    .cards {
-      grid-template-columns: none;
-    }
-    .dropdown {
-      display: none;
-    }
-  }
-  
-
+.banner-shop-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  top: 35%;
 }
 
-@media screen and (min-width: 1200px) {
-
-  .searchResult {
-    .cards {
-      grid-template-columns: repeat(4, 225.6px) !important; 
-      width: 998px;
-    }
-  }
-}
-
-.filters {
-  margin-bottom: 50px;
-  line-height: 1.2em;
-}
-
-.filters > h3 {
-  font-family: "Playfair Display", Sans-serif;
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.filters > h2 {
-  font-family: "Playfair Display", Sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-}
-
-.filters > p {
-  font-family: "Fira Sans", sans-serif;
-  cursor: pointer;
-}
-
-.filters > p:hover {
-  color: #d1bfb5;
-}
-
-.filtersColumn {
+.banner-shop-text h1, p{
   text-transform: uppercase;
 }
 
-.categoryFilter {
-  margin-bottom: 50px;
+.banner-shop-text h1 {
+  font-size: 97px;
+  font-family: var(--title-default-font);
+  color: var(--banner-text-color);
+  font-weight: 500;
+  margin-bottom: 11px;
 }
 
+.banner-shop-text p {
+  font-size: 23px;
+  font-family: var(--text-default-font);
+  color: var(--banner-text-color);
+  margin: 0;
+}
 
-/* topRow Section */
-
-.topRow {
-  align-items: center;
+.result-grid {
+  display: flex;
   justify-content: space-between;
+}
+
+.filters-column {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.filters h3 {
+  font-family: var(--title-default-font);
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.filters h2, p {
+  color: var(--text-color);
+  font-family: var(--text-default-font);
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.filters p {
+  margin-bottom: 5px;
+}
+
+.filters h2 {
+  font-family: var(--title-default-font);
+  font-weight: 800;
   margin-bottom: 20px;
 }
 
-.topRow > p {
-  pointer-events: none;
+.search-result {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.dropdownButton {
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Dropdown menu section */
+.dropdown-button {
+  display: flex;
   border: 1px solid #000000;
   border-radius: 4px;
   padding: 10px 20px;
@@ -96,12 +90,11 @@
   background-color: #efefef;
 }
 
-.dropdownButton > p {
-  margin: 0;
+.top-row p {
+  text-transform: capitalize;
 }
 
 .dropdown {
-  position: relative;
   display: inline-block;
 }
 
@@ -130,15 +123,83 @@
   display: block;
 }
 
-/* results Section */
-
-.searchResult {
-  flex-direction: column;
-}
-
 .cards {
   display: grid;
- 
   gap: 30px;
+  grid-template-columns: repeat(4, 225.6px); 
+  width: 998px;
+}
 
+@media (max-width: 576px) {
+  .banner-shop-text h1 {
+    font-size: 40px;
+  }
+  .banner-shop-text p {
+    font-size: 20px;
+  }
+
+
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .dropdown-menus{
+    display: flex;
+    flex-direction: row;
+    gap: 90px !important;
+  }
+
+  .dropdown-button {
+    gap: 10px;
+  }
+
+  .dropdown-content a {
+    font-size: 18px;
+  }  
+}
+
+@media (max-width: 768px) {
+  .count-of-results {
+    display: none;
+  }
+
+  .filters-column{
+    display: none;
+  }
+
+  .dropdown-menus{
+    display: flex;
+    flex-direction: row;
+    gap: 320px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    width: auto;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+  .filters-dropdown {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 225.6px); 
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(4, 225.6px); 
+    width: auto;
+  }
 }
