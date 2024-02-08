@@ -1,57 +1,38 @@
+import { useState } from 'react';
 import '../../Styles/css/Header.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
-    return (
-        <header>
-            <nav className='navbar navbar-expand-lg '>
-                <div className="container">
-                    <div className='containerLinks'>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className='navbar-nav'>
-                                <li className='nav-item'>
-                                    <a className="nav-link" href="/">Home<span className="sr-only"></span></a>
-                                </li>
-                                <li className='nav-item' >
-                                    <a className="nav-link" href="/shop">Shop</a>
-                                </li>
-                                <li className='nav-item'>
-                                    <a className="nav-link" href="/aboutus">Acerca de</a>
-                                </li>
-                                <li className='nav-item'>
-                                    <a className="nav-link" href="/blog">Blog</a>
-                                </li>
-                                <li className='nav-item'>
-                                    <a className="nav-link" href="/contact">Contacto</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className='title'>
-                        <h2 className='navbar-brand'>TELARES</h2>
-                    </div>
-                    <div className='containerIcons'>
-                        <ul className='navbar-nav'>
-                            <li className='nav-item'>
-                                <img className="headerIcon nav-link" src="src/assets/bag.svg" alt="cart" />
-                            </li>
-                            <li className='nav-item' >
-                                <img className="nav-link headerIcon" src="src/assets/heart.svg" alt="cart" />
-                            </li>
-                            <li className='nav-item'>
-                                <img className="nav-link headerIcon" src="src/assets/user.svg" alt="cart" />
-                            </li>
-                            <li className='nav-item'>
-                                <img className="nav-link headerIcon" src="src/assets/lupa.svg" alt="cart" />
-                            </li>
+    const [menuOpen, setMenuOpen] = useState(false);
 
-                        </ul>
-                    </div>
+    return (
+        <nav>
+            <div className='nav-container'>
+                {/* <div className='titleDiv'> */}
+                    <h2 className="title tMobile">Telares</h2>
+                {/* </div> */}
+                <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </nav>
-        </header>
+            </div>
+            <ul className={menuOpen ? "open" : ""}>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/shop">Shop</Link></li>
+                <li><Link to="/aboutus">Acerca De</Link></li>
+                <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/contact">Contacto</Link></li>
+            </ul>
+            <h2 className="title tWeb">Telares</h2>
+            <ul className={menuOpen ? "open icons" : ""}> 
+                <li><Link><img className="headerIcon" src="src/assets/bag.svg" alt="cart" /></Link></li>
+                <li><Link><img className="headerIcon" src="src/assets/heart.svg" alt="cart" /></Link></li>
+                <li><Link><img className="headerIcon" src="src/assets/user.svg" alt="cart" /></Link></li>
+                <li><Link><img className="headerIcon" src="src/assets/lupa.svg" alt="cart" /></Link></li>
+            </ul>
+
+        </nav>
     );
 }
 
