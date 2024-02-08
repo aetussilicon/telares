@@ -1,25 +1,46 @@
-/* Banner Section
-
-.banner {
-    height: 500px;
-    width: 1250px;
-    margin-bottom: 500px;
-} */
-
-.categoriesBlock {
+/* main-banner Section */
+.banner-home {
+    background-image: url(/backgrounds/bgHome.jpg) !important;
     margin-bottom: 50px;
 }
 
-/* .banner > img {
-    position: relative;
-    overflow: hidden;
-} */
-
-.bannerHome {
-    background-image: url(/backgrounds/bgHome.jpg) !important;
+.banner-text {
+    position: absolute;
+    align-items: start;
+    flex-direction: column;
+    padding: 50px;
+    top: 30%;
+    z-index: 2;
 }
 
-.selectBlock {
+.banner-text p{
+    color: var(--banner-text-color);
+    font-size: 20px;
+    font-family: var(--text-default-font);
+}
+
+.banner-text button {
+    background-color: transparent;
+    border: 3px solid var(--border-color);
+    color: var(--banner-text-color);
+    padding: 7px 30px;
+    font-family: var(--text-default-font);
+}
+
+.banner-text h3 {
+    font-size: 51px;
+    font-weight: 400;
+    font-family: var(--text-default-font);
+    text-transform: uppercase;
+    color: var(--banner-text-color);
+}
+
+/* Categories Section */
+.categories-container {
+    margin-bottom: 50px;
+}
+
+.categories-banner {
     height: 455px;
     width: 455px;
     overflow: hidden;
@@ -28,50 +49,19 @@
     align-items: center;
 }
 
-.selectBlock > img {
+/* Adjust imgs in the blocks */
+.categories-banner img {
     height: 450px;
     display: block;
     
 }
 
-.banner .text {
-    position: absolute;
-    align-items: start;
-    flex-direction: column;
-    padding: 50px;
-    top: 400px;
+.firtsBlock > img{
+    height: 650px !important;
 }
 
-.banner .text > p{
-    color: #ffffff;
-    font-size: 20px;
-}
 
-.banner .text > button {
-    background-color: transparent;
-    border: 3px solid #ffffff;
-    color: #ffffff;
-    padding: 7px 30px;
-    font-family: 'Fira Sans', sans-serif;
-}
-
-.banner .text > h3 {
-    font-size: 51px;
-    font-weight: 400;
-    font-family: 'Fira Sans', sans-serif;
-    text-transform: uppercase;
-    color: #ffffff;
-}
-
-.selectBlock .text > button {
-    background-color: transparent;
-    border: 3px solid #ffffff;
-    color: #ffffff;
-    padding: 7px 30px;
-    font-family: 'Fira Sans', sans-serif;
-}
-
-.selectBlock .text {
+.categories-text {
     position: absolute;
     left: 50%;
     width: 80%;
@@ -80,24 +70,24 @@
     z-index: 2;
 }
 
-.text > h3 {
+.categories-text h3 {
     font-family: "Playfair Display", Sans-serif;
 }
 
-.selectBlock .text > p {
-    font-family: 'Fira Sans', sans-serif;
+.categories-text p {
+    font-family: var(--text-default-font);
     font-size: 15px;
 }
 
-/* .banner::before {
-    content: "";
-    position: absolute;
-    width: 1244px;
-    height: 800px;
-    background-color: rgba(0, 0, 0, 25%);
-} */
+.categories-text button {
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    padding: 7px 30px;
+    font-family: var(--text-default-font);
+}
 
-.selectBlock::before {
+.categories-banner::before {
     content: "";
     position: absolute;
     top: 0;
@@ -108,16 +98,32 @@
     transition: background-color 0.6s ease;
     z-index: 1;
 }
-.selectBlock:hover::before{
+
+.categories-banner:hover::before{
     background-color: rgba(229, 172, 157, 50%);
 }
 
-.firtsBlock > img{
-    height: 650px !important;
-}
-
-.selectBlock:hover > img {
+.categories-banner:hover > img {
     transform: translate(-100px, 0);
     transition: transform 330ms ease-out;
     
+}
+
+@media (max-width: 1024px) {
+
+    .categories-container {
+        flex-direction: column;
+    }
+
+    .categories-banner {
+        width: auto;
+        height: 300px;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .categories-banner img {
+        height: 850px !important; 
+    } 
 }

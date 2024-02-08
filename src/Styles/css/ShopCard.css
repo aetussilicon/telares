@@ -1,14 +1,22 @@
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
+
+    .shop-card-container {
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
+
+
     .shopCard {
         display: flex;
         align-items: center;
 
         .itemIcon {
-            height: 150px ;
+            height: 150px !important ;
             margin: 0;
         }
 
-        .cardInfo > h2 {
+        .cardInfo h2 {
             font-size: 20px;
             margin-bottom: 10px;
         } 
@@ -17,7 +25,7 @@
             font-size: 18px !important;
             margin: 0;
         }
-        .cardInfo > p {
+        .cardInfo p {
             font-size: 30px;
             margin: 0;
         }
@@ -33,6 +41,43 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .shop-card-container {
+        width: auto;
+        height: auto;
+    }
+
+    .itemIcon {
+        height: 320px !important;
+        margin: 0;
+    }
+    
+    .cardInfo h2 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    } 
+
+    .cardInfo p {
+        font-size: 25px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .shop-card-container {
+        width: auto;
+        height: auto;
+    }
+
+    .itemIcon {
+        height: 225px !important;
+    }
+
+}
+
+
 
 .shopCard > p, h2 {
     margin: 0;
@@ -66,6 +111,6 @@
     font-size: 16px;
 }
 
-.container {
-    padding: 0;
+.shop-card-container {
+    padding: 0 !important;
 }
