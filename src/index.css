@@ -1,1 +1,10 @@
-
+:root {
+    --text-hover-color: #D1BFB5;
+    --text-color: #000000;
+    --banner-text-color: #ffffff;
+    --border-color: #ffffff;
+    --title-default-font: 'Playfair Display', Sans-serif;
+    --text-default-font: 'Fira Sans', sans-serif;
+    --spliter-color: #c1c1c1;
+    --about-page-text-color: #AEAEAE;
+}

@@ -1,21 +1,20 @@
-#root {
-  box-sizing: border-box;
+p a h1 h2 h3 {
+  color: var(--text-color);
 }
 
 .container {
   position: relative;
   padding: 15px 50px !important;
+  box-sizing: content-box !important;
 }
 
-@media screen and (max-width: 767px){
-  .banner {
-    .bannerImg {
-      display: none;
-    }
+@media screen and (max-width: 768px){
+  .container {
+    padding: 15px 15px !important;
   }
 }
 
-.banner {
+.main-banner {
   margin-bottom: 100px;
   width: 100%;
   height: 700px;
@@ -24,7 +23,7 @@
   position: relative;
 }
 
-.banner::before {
+.main-banner::before {
   content: "";
   position: absolute;
   top: 0;
@@ -35,7 +34,7 @@
   z-index: 2;
 }
 
-.banner > img {
+.main-banner img {
   width: 100%;
   height: auto;
   overflow: hidden !important;
@@ -45,9 +44,9 @@
 
 p:hover {
   transition: color 0.3s;
-  color: #D1BFB5;
+  color: var(--text-hover-color);
 }
 
-h1, h2, h3 {
-  font-family: "Playfair Display", Sans-serif;
+.no-hover{
+  pointer-events: none;
 }
