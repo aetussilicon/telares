@@ -1,0 +1,58 @@
+.cover-img {
+    background-image: url(backgrounds/bgBlog.jpg) !important;
+    height: 442px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-img h1 {
+    font-size: 68px;
+    color: var(--border-color);
+    font-family: var(--title-default-font);
+    z-index: 2;
+}
+
+.card-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    gap: 30px;
+}
+
+.blog-container {
+    padding: 15px;
+}
+
+
+@media (max-width: 576px) {
+    .cover-img-full {
+        display: none;
+    }
+
+    .blog-container {
+        display: flex;
+        justify-self: center; 
+       padding-right: 0 !important;
+    }
+
+    .cover-img h1 {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cover-img-container {
+        display: none;
+    }
+
+    .cover-img-full {
+        margin: 0;
+    }
+}

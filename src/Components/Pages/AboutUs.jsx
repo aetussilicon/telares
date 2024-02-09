@@ -4,23 +4,24 @@ import '../../Styles/css/AboutUs.css';
 function AboutUs() {
     return (
         <>
-            <Header />
-            <section className="main">
-                <div className="container apresentationBlock">
+            <div className="container headerContainer">
+                <Header />
+            </div>
+            <main >
+                <div className="container apresentation-container">
                     <div className="apresentation">
-                        <div className="introduction d-flex">
+                        <div className="introduction">
                             <div>
-                                <img className="apresentationImg" src="/imgs/logoAbout.png" />
+                                <img src="/imgs/logoAbout.png" />
                             </div>
-
-                            <p className="blockText">Somos un equipo de personas
+                            <p className="no-hover">Somos un equipo de personas
                                 dedicadas a agregar valor a los espacios dominicanos
                                 y de cualquier otra parte del mundo a la que podamos
                                 llegar- a través de nuestros tejidos y otros pocos
                                 artículos más que comercializamos. Como equipo, nos
                                 une y nos apasiona la búsqueda de la excelencia en
                                 nuestro trabajo.</p>
-                            <p className="blockText">
+                            <p className="no-hover">
                                 iniciamos este trayecto en 2013, a partir de que nuestro
                                 fundador y CEO, Dario Martinez Alonso, comerciante con rás
                                 de 35 años de experiencia, identificase un vacio en el
@@ -33,42 +34,42 @@ function AboutUs() {
                                 mismas ganas que el primer día de formar parte de todos los hogares
                                 que podamos a través de nuestras telas.
                             </p>
-                            <p className="blockText">
+                            <p className="no-hover">
                                 Aunque nos especializamos en telas, no es cierto que sólo vendemos telas;
                                 nuestro propósito es facilitar convertir casas en hogares.
                             </p>
                         </div>
                     </div>
                     <div className="services">
-                        <div className="blockServicesTitle">
+                        <div className="services-title">
                             <h1>NUESTROS SERVICIOS</h1>
                         </div>
-                        <div className="blockServies">
-                            <div className="blockServicesInfo">
+                        <div className="services-container-text">
+                            <div className="services-content">
                                 <img className="circle" src="/icons/circle.svg" alt="circle" />
-                                <div className="blockInfo">
+                                <div className="info">
                                     <h3>LOREM IPSUM</h3>
-                                    <p>
+                                    <p className="no-hover">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
                                         luctus nec ullamcorper mattis, pulvinar dapibus leo.
                                     </p>
                                 </div>
                             </div>
-                            <div className="blockServicesInfo">
+                            <div className="services-content">
                                 <img className="circle" src="/icons/circle.svg" alt="circle" />
-                                <div className="blockInfo">
+                                <div className="info">
                                     <h3>LOREM IPSUM</h3>
-                                    <p>
+                                    <p className="no-hover">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
                                         luctus nec ullamcorper mattis, pulvinar dapibus leo.
                                     </p>
                                 </div>
                             </div>
-                            <div className="blockServicesInfo">
+                            <div className="services-content">
                                 <img className="circle" src="/icons/circle.svg" alt="circle" />
-                                <div className="blockInfo">
+                                <div className="info">
                                     <h3>LOREM IPSUM</h3>
-                                    <p>
+                                    <p className="no-hover">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
                                         luctus nec ullamcorper mattis, pulvinar dapibus leo.
                                     </p>
@@ -76,19 +77,19 @@ function AboutUs() {
                             </div>
                         </div>
                     </div>
-                    <div className="blockWhoIs">
-                        <div className="blockInfo blockInfoWhoIs blockInfoWhoIsRight">
+                    <div className="we-container">
+                        <div className="info info-container info-container-right">
                             <h3>LOREM IPSUM</h3>
                             <h3>LOREM IPSUM</h3>
-                            <p>
+                            <p className="no-hover">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
                                 luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit
                                 amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
                                 mattis, pulvinar dapibus leo.
                             </p>
                         </div>
-                        <img className="blockWhoIsImg" src="/imgs/persons.png" alt="persons.png" />
-                        <div className="blockInfo blockInfoWhoIs blockInfoWhoIsLeft">
+                        <img className="we-container-img" src="/imgs/persons.png" alt="persons.png" />
+                        <div className="info info-container info-container-left">
                             <h3>LOREM IPSUM</h3>
                             <h3>LOREM IPSUM</h3>
                             <p>
@@ -100,7 +101,7 @@ function AboutUs() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </main>
         </>
     );
 }
