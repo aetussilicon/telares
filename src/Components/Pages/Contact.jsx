@@ -1,52 +1,57 @@
 import Header from "../Elements/Header";
 import '../../Styles/css/Contact.css';
+import PageFooter from "../Elements/PageFooter";
+import { Link } from "react-router-dom";
 
 function Contact() {
     return (
+
         <>
-            <Header />
             <div className="container">
-                <div className="banner" />
-                <div className="containerInfo d-flex">
-                    <div className="containerInfoInside d-flex">
-                        <div className="block">
-                            <div className="horario blockItem">
-                                <h2 className="infoTitle">Horario</h2>
-                                <div className="info">
-                                    <p className="inforSubtitle">lunes e sábado</p>
-                                    <p className="blockInfo">9:00 AM A 7:00 PM</p>
-                                </div>
+                <Header />
+            </div>
+            <div className="container">
+                <div className="main-banner contact-banner" />
+                <div className="contact-container">
+                    <div className="contact-content">
+                        <div className="contact-cards">
+                            <div className="card-section">
+                                <h2>Horario</h2>
+                                <p className="lunes">lunes e sábado</p>
+                                <p>9:00 AM A 7:00 PM</p>
                             </div>
-                            <div className="socialNetworks">
-                                <h2 className="infoTitle">REDES SOCIALES</h2>
-                                <a href="#"><img className="socialIcon" src="/icons/facebook.png" alt="facebook.png" /></a>
-                                <a href="#"><img className="socialIcon" src="/icons/twitter.png" alt="twitter.png" /></a>
-                                <a href="#"><img className="socialIcon" src="/icons/youtube.png" alt="youtube.png" /></a>
-                                <a href="#"><img className="socialIcon" src="/icons/instagram.png" alt="instagram.png" /></a>
-                            </div>
-                        </div>
-                        <div className="block">
-                            <div className="contact blockItem">
-                                <h2 className="infoTitle">Télefonos</h2>
-                                <p className="blockInfo">(809) 563 2206</p>
-                                <p className="blockInfo">(809) 563 2206</p>
-                            </div>
-                            <div className="email blockItem">
-                                <h2 className="infoTitle">Correo</h2>
-                                <p className="blockInfo">VENTAS@TELARESRD.COM</p>
+                            <div className="card-section social-networks">
+                                <h2>REDES SOCIALES</h2>
+                                <ul className="networks">
+                                    <li><Link to="#"><img src="/icons/facebook.svg" width={32} alt="facebook" /></Link></li>
+                                    <li><Link to="#"><img src="/icons/twitter.svg" width={32} alt="twitter" /></Link></li>
+                                    <li><Link to="#"><img src="/icons/youtube.svg" width={32} alt="youtube" /></Link></li>
+                                    <li><Link to="#"><img src="/icons/instagram.svg" width={32} alt="instagram" /></Link></li>
+                                </ul>
                             </div>
                         </div>
-                        <div className="block">
-                            <div className="address blockItem">
-                                <h2 className="infoTitle">Dirección</h2>
-                                <p className="blockInfo">AV. ING ROBERTO PASTORIZA 212</p>
-                                <p className="blockInfo">SANTO DOMINGO, REPÚBLICA DOMINICANA</p>
+                        <div className="contact-cards">
+                            <div className="card-section">
+                                <h2>Telefónos</h2>
+                                <p className="no-margin">(809) 563 2206</p>
+                                <p className="plus-margin">(809) 563 2206M</p>
+                            </div>
+                            <div className="card-section">
+                                <h2>Correo</h2>
+                                <p>Ventas@Telaresrd.com</p>
+                            </div>
+                        </div>
+                        <div className="contact-cards">
+                            <div className="card-section">
+                                <h2>Dirección</h2>
+                                <p>AV. ING ROBERTO PASTORIZA 212</p>
+                                <p>SANTO DOMINGO, REPÚBLICA DOMINICANA</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <PageFooter />
         </>
     );
 }
